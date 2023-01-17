@@ -8,9 +8,13 @@ import { Component } from '@angular/core';
 export class UsernameCheckComponent {
   userName = '';
 
-
   onUpdateUserName(event:Event) {
     this.userName = (<HTMLInputElement>event.target).value;
+  }
+
+  onClearUsername() {
+    this.userName = '';
+    location.reload();
   }
 
 }
